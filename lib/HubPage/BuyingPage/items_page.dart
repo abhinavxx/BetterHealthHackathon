@@ -24,6 +24,22 @@ class _BuyingITemsState extends State<BuyingITems> {
     "assets/14.jpg",
     "assets/15.jpg"
   ];
+  List<String> name = [
+    "name 1",
+    "name 2",
+    "name 3",
+    "name 4",
+    "name 5",
+    "name 6",
+    "name 7",
+    "name 8",
+    "name 9",
+    "name 10",
+    "name 11",
+    "name 12",
+    "name 13",
+    "name 14",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,17 +80,14 @@ class _BuyingITemsState extends State<BuyingITems> {
               ],
             ),
           ),
-          SizedBox(height: 10.0),
           Flexible(
             child: GridView.count(
               crossAxisCount: 2,
               children: List.generate(10, (index) {
                 return Container(
                   decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(40)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: GestureDetector(
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  child: GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
@@ -85,13 +98,38 @@ class _BuyingITemsState extends State<BuyingITems> {
                       },
                       child: Card(
                         elevation: 4,
-                        child: Image.asset(
-                          image[index],
-                          fit: BoxFit.cover,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Flexible(
+                              child: Container(
+                                margin: EdgeInsets.only(
+                                    left: 0, right: 0, top: 0, bottom: 2),
+                                child: SizedBox(
+                                  height: 140,
+                                  child: Image.asset(
+                                    image[index],
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Text(
+                              name[index],
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 17),
+                            ),
+                            Text(
+                              "Rs. 39.00",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 17,
+                                  color: Colors.green),
+                            ),
+                          ],
                         ),
-                      ),
-                    ),
-                  ),
+                      )),
                 );
               }),
             ),

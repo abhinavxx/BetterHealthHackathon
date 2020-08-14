@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:projectBiyt/HubPage/BookingPage/booking_shops.dart';
 
 class Booking extends StatefulWidget {
   @override
@@ -55,32 +56,41 @@ class _BookingState extends State<Booking> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(6.0),
-                              child: Card(
-                                elevation: 5,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: const BorderRadius.all(
-                                    Radius.circular(8.0),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              BookingShops()));
+                                },
+                                child: Card(
+                                  elevation: 5,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: const BorderRadius.all(
+                                      Radius.circular(8.0),
+                                    ),
                                   ),
-                                ),
-                                child: SizedBox(
-                                  height: 100,
-                                  width: 110,
-                                  child: Column(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 12,
-                                            left: 8,
-                                            right: 8,
-                                            bottom: 8),
-                                        child: FaIcon(
-                                            FontAwesomeIcons.stethoscope),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text("DOCTOR"),
-                                      )
-                                    ],
+                                  child: SizedBox(
+                                    height: 100,
+                                    width: 110,
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 12,
+                                              left: 8,
+                                              right: 8,
+                                              bottom: 8),
+                                          child: FaIcon(
+                                              FontAwesomeIcons.stethoscope),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text("DOCTOR"),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

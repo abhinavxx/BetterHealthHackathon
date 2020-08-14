@@ -3,7 +3,7 @@ library bottom_navy_bar;
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class BottomNavyBar extends StatelessWidget {
+class BottomNavyBar extends StatefulWidget {
   final int selectedIndex;
   final double iconSize;
   final Color backgroundColor;
@@ -29,14 +29,20 @@ class BottomNavyBar extends StatelessWidget {
     assert(items.length >= 2 && items.length <= 5);
     assert(onItemSelected != null);
   }
+
+  @override
+  _BottomNavyBarState createState() => _BottomNavyBarState();
+}
+
+class _BottomNavyBarState extends State<BottomNavyBar> {
   @override
   Widget build(BuildContext context) {
-    final bgColor = (backgroundColor == null)
+    final bgColor = (widget.backgroundColor == null)
         ? Theme.of(context).bottomAppBarColor
-        : backgroundColor;
+        : widget.backgroundColor;
     return Container(
         decoration: BoxDecoration(color: bgColor, boxShadow: [
-          if (showElevation)
+          if (widget.showElevation)
             const BoxShadow(
               color: Colors.black12,
               blurRadius: 2,
@@ -48,18 +54,18 @@ class BottomNavyBar extends StatelessWidget {
                 height: 56,
                 padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
                 child: Row(
-                  mainAxisAlignment: mainAxisAlignment,
-                  children: items.map((item) {
-                    var index = items.indexOf(item);
+                  mainAxisAlignment: widget.mainAxisAlignment,
+                  children: widget.items.map((item) {
+                    var index = widget.items.indexOf(item);
                     return GestureDetector(
-                        onTap: () => onItemSelected(index),
+                        onTap: () => widget.onItemSelected(index),
                         child: _ItemWidget(
                           item: item,
-                          iconSize: iconSize,
-                          isSelected: index == selectedIndex,
+                          iconSize: widget.iconSize,
+                          isSelected: index == widget.selectedIndex,
                           backgroundColor: bgColor,
-                          itemCornerRadius: itemCornerRadius,
-                          animationDuration: animationDuration,
+                          itemCornerRadius: widget.itemCornerRadius,
+                          animationDuration: widget.animationDuration,
                         ));
                   }).toList(),
                 ))));

@@ -9,21 +9,22 @@ class Electronics extends StatefulWidget {
 
 class _ElectronicsState extends State<Electronics> {
   List<String> image = [
-    "assets/12.jpg",
-    "assets/14.jpg",
-    "assets/16.jpg",
+    "assets/101.jpg",
+    "assets/104.jpg",
     "assets/11.jpg",
-    "assets/12.jpg",
-    "assets/14.jpg",
-    "assets/15.jpg"
+    "assets/102.jpg",
   ];
   List<String> litems = [
-    "ShopNumber 1",
-    "ShopNumber 2",
-    "ShopNumber 3",
-    "ShopNumber 4",
-    "ShopNumber 5",
-    "ShopNumber 6",
+    "Pharmacy Store",
+    "Medical Store",
+    "Medicine shop",
+    "Medicore",
+  ];
+  List<String> subitems = [
+    "10 km away",
+    "5 km away",
+    "10 km away",
+    "5 km away",
   ];
 
   @override
@@ -88,7 +89,7 @@ class _ElectronicsState extends State<Electronics> {
                               MaterialPageRoute(
                                   builder: (context) => BuyingITems()));
                         },
-                        subtitle: Text("subtitle"),
+                        subtitle: Text(subitems[index]),
                         leading: CircleAvatar(
                           child: Image.asset(
                             "${image[index]}",
@@ -103,7 +104,7 @@ class _ElectronicsState extends State<Electronics> {
                     ),
                   );
                 }),
-          )
+          ),
         ],
       ),
     );
