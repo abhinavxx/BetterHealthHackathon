@@ -30,6 +30,10 @@ dependencies:
   cupertino_icons: ^0.1.3
   font_awesome_flutter: ^8.8.1
   buttons_tabbar: ^1.0.0+1
+  flip_card: ^0.4.4
+  shimmer: 
+  permission_handler: ^5.0.0+hotfix.5
+
 
 
 dev_dependencies:
@@ -60,6 +64,15 @@ flutter:
     - assets/12.jpg
     - assets/14.jpg
     - assets/15.jpg
+    - assets/watch1.jpg
+    - assets/watch2.jpg
+    - assets/101.jpg
+    - assets/102.jpg
+    - assets/104.jpg
+    - assets/imp17.jpg
+    - assets/list.jpg
+    - assets/doctor.jpg
+
 
   #   - images/a_dot_ham.jpeg
 
