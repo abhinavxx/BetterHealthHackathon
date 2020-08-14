@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flip_card/flip_card.dart';
 
 class BookList extends StatefulWidget {
   @override

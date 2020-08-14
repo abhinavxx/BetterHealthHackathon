@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projectBiyt/BottomNavigation/BookingList/list.dart';
 import 'package:projectBiyt/HubPage/BuyingPage/categories.dart';
-import 'package:projectBiyt/HubPage/bottom_navy_Bar.dart';
 import 'package:projectBiyt/HubPage/BookingPage/categories.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
