@@ -1,16 +1,4 @@
-# projectBiyt
+# projectBiyt snapshot
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![IMG_20200814_113840](https://user-images.githubusercontent.com/42836807/102994003-39845a80-4544-11eb-8fae-9e36bacf464e.jpg)
+![IMG_20200814_113819](https://user-images.githubusercontent.com/42836807/102994006-3b4e1e00-4544-11eb-9878-30cc06109639.jpg)
